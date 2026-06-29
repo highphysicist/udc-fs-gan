@@ -1,1 +1,7 @@
-
+include: base.yaml
+comparison_models:
+  - nearest
+  - bicubic
+  - srgan
+  - aga_gan
+  - wipa

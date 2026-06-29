@@ -1,1 +1,9 @@
-
+include: base.yaml
+dataset:
+  image_size: 256
+  lr_size: 64
+  scale_factor: 4
+  resize_mode: nearest
+  downsample_mode: bicubic
+train:
+  batch_size: 1

@@ -1,1 +1,32 @@
-
+project_name: udc_fsgan
+seed: 42
+device: cuda
+dataset:
+  name: celeba_hq
+  root: /content/drive/MyDrive/CelebA-HQ
+  image_size: 256
+  lr_size: 64
+  scale_factor: 4
+  resize_mode: nearest
+  downsample_mode: bicubic
+  train_split: 0.95
+  num_workers: 2
+train:
+  batch_size: 1
+  epochs: 9000
+  lr: 0.0002
+  beta1: 0.5
+  beta2: 0.999
+  lambda_pixel: 1.0
+  lambda_perceptual: 1.0
+  lambda_adv: 0.001
+  save_every: 1
+  log_every: 50
+model:
+  generator_base_channels: 64
+  discriminator_base_channels: 64
+  pretrained_vgg: true
+  target_size: 256
+output:
+  dir: outputs
+  weights_dir: weights
